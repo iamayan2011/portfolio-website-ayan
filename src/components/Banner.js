@@ -10,8 +10,8 @@ export default function Banner() {
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = [ "Web Developer", "Graphic Designer", "UI/UX Designer"];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const period = 2000;
+    const [delta, setDelta] = useState(300 - Math.random()*0.01);
+    const period = 1000;
     const [index, setIndex] = useState(1);
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function Banner() {
     const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0, text.length);
+        let updatedText = isDeleting ? fullText.substring(0, text.length -1) : fullText.substring(0, text.length + 1);
 
         setText(updatedText);
 
@@ -54,7 +54,7 @@ export default function Banner() {
             <Row className="align-items-center">
                 <Col xs={12} md={6} xl={7}>
                     <span className='tagline'>Welcome to my Portfolio</span>
-                    <h1>{`Hi I'm Ayan `}<span className='wrap'>{text}</span></h1>
+                    <h1>{`Hi I'm Ayan `}<br></br><span className='wrap'>{text}</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem libero dolore aspernatur. Alias saepe corporis molestiae, accusamus commodi temporibus inventore nulla minus quia vitae aliquid, earum libero in, hic ipsam.</p>
                     <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
                 </Col>
