@@ -8,7 +8,7 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import portfolioImg from "../assets/img/portfolio-img.png";
 import marvelImg from "../assets/img/introversal-img.png";
 import yumCourier from "../assets/img/yum.png";
-import weatherRay from "../assets/img/weatherRay";
+import weatherRay from "../assets/img/weatherApp.png";
 
 export default function Projects() {
   const WebProjects = [
